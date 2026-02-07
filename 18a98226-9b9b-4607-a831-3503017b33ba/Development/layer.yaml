@@ -1,0 +1,190 @@
+id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+name: Development
+type: 1
+canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+blocks:
+- auto_size: false
+  canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  compute_settings: null
+  description: Extracts user engagement and success metrics from event logs, computing
+    25+ features including activity frequency, event diversity, tool usage, and session
+    patterns
+  height: 1000
+  id: 06f8f4ed-1198-4942-bb31-9a191e802c2b
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  name: engineer_user_success_features
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 0
+- auto_size: false
+  canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  compute_settings: null
+  description: Identifies event sequence patterns and workflow completeness for power
+    users and active users
+  height: 1000
+  id: 48ca48cb-3c92-484f-be19-f17b5afd140e
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  name: event_sequence_patterns
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 1400
+- auto_size: false
+  canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  compute_settings: null
+  description: Segments users into 5 success tiers using weighted composite score
+    from usage, workflow depth, and engagement metrics
+  height: 1000
+  id: 4b697694-7484-49a7-a02f-9ed135fa9246
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  name: segment_users_by_success
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 0
+- auto_size: false
+  canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  compute_settings: null
+  description: Extracts user IDs, session IDs, events, timestamps, and credit usage
+    metrics from raw event data into lean analytical dataset
+  height: 1000
+  id: 5852b5e7-982f-4360-a03f-cfe020992d19
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  name: filter_essential_columns
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 0
+- auto_size: false
+  canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  compute_settings: null
+  description: Segments users by credit usage levels and analyzes how spending correlates
+    with success metrics, engagement, and user tiers
+  height: 1000
+  id: 63264f6b-b6b1-4ab5-875e-6173c7846bfd
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  name: credit_usage_threshold_analysis
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 2800
+- auto_size: false
+  canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  compute_settings: null
+  description: Loads CSV hackathon dataset and performs comprehensive data inspection
+    including dimensions, data types, memory usage, null values, event type distribution,
+    and ID consistency checks.
+  height: 1000
+  id: 68d424ff-7894-41fb-88aa-652a8c4727f8
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  name: csv_data_inspection
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 0
+- auto_size: false
+  canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  compute_settings: null
+  description: Identifies which early user behaviors best predict long-term success
+    through statistical correlation analysis
+  height: 1000
+  id: 6d729440-27ee-4980-b256-605072390a95
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  name: early_behavior_correlation
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 0
+- auto_size: false
+  canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  compute_settings: null
+  description: 'Creates 6 presentation-ready visualizations showing success drivers:
+    tier distribution, early behavior correlations, credit impact, behavioral metrics
+    across tiers, workflow completeness, and score component breakdown'
+  height: 1000
+  id: f4651a08-a8c2-496c-a85e-f6655234cb56
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  name: visualize_success_drivers
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 10000
+  y: 2800
+edges:
+- canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  id: 118b9842-93fd-4d10-ac47-f61f90461af8
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  source: 63264f6b-b6b1-4ab5-875e-6173c7846bfd
+  target: f4651a08-a8c2-496c-a85e-f6655234cb56
+- canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  id: 320c28df-5e48-42f5-a2a5-864104b0577c
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  source: 4b697694-7484-49a7-a02f-9ed135fa9246
+  target: f4651a08-a8c2-496c-a85e-f6655234cb56
+- canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  id: 35ce2b39-efc2-4369-8cf4-3fa580e54ad0
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  source: 06f8f4ed-1198-4942-bb31-9a191e802c2b
+  target: 4b697694-7484-49a7-a02f-9ed135fa9246
+- canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  id: 5a162210-a788-45b6-8e4c-a0889607f2e0
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  source: 4b697694-7484-49a7-a02f-9ed135fa9246
+  target: 6d729440-27ee-4980-b256-605072390a95
+- canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  id: 6cd04d11-cd01-440f-aaf0-d702b10132f0
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  source: 68d424ff-7894-41fb-88aa-652a8c4727f8
+  target: 5852b5e7-982f-4360-a03f-cfe020992d19
+- canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  id: b25fc723-2112-4096-9c78-543162c5e518
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  source: 48ca48cb-3c92-484f-be19-f17b5afd140e
+  target: f4651a08-a8c2-496c-a85e-f6655234cb56
+- canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  id: cd85d325-9441-45f7-afb2-3ac6b13bf3ad
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  source: 5852b5e7-982f-4360-a03f-cfe020992d19
+  target: 06f8f4ed-1198-4942-bb31-9a191e802c2b
+- canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  id: e2dcdbfc-21fb-437f-91f8-60b249678362
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  source: 4b697694-7484-49a7-a02f-9ed135fa9246
+  target: 63264f6b-b6b1-4ab5-875e-6173c7846bfd
+- canvas_id: 18a98226-9b9b-4607-a831-3503017b33ba
+  id: fedf8927-03ce-45e6-afec-a4cc1556572d
+  layer_id: 031fbe46-c188-4892-bf3c-b0c37a12a2a6
+  source: 4b697694-7484-49a7-a02f-9ed135fa9246
+  target: 48ca48cb-3c92-484f-be19-f17b5afd140e
