@@ -71,16 +71,16 @@ print(f"Total users with credits > 0: {len(users_with_credits):,} ({len(users_wi
 print(f"\nPercentile Distribution:")
 
 threshold_stats = []
-for p in percentiles:
-    threshold = users_with_credits['total_credits_used'].quantile(p/100)
+for _p in percentiles:
+    threshold = users_with_credits['total_credits_used'].quantile(_p/100)
     users_above = (users_with_credits['total_credits_used'] >= threshold).sum()
     avg_success_above = users_with_credits[users_with_credits['total_credits_used'] >= threshold]['composite_success_score'].mean()
     avg_days_above = users_with_credits[users_with_credits['total_credits_used'] >= threshold]['days_active'].mean()
     
-    print(f"  {p:3d}th percentile: {threshold:8.2f} credits ({users_above:4,} users above, avg success score: {avg_success_above:.2f})")
+    print(f"  {_p:3d}th percentile: {threshold:8.2f} credits ({users_above:4,} users above, avg success score: {avg_success_above:.2f})")
     
     threshold_stats.append({
-        'percentile': p,
+        'percentile': _p,
         'threshold': threshold,
         'users_above': users_above,
         'avg_success_score': avg_success_above,
@@ -141,8 +141,8 @@ correlations = {
     'Composite Success': user_segments_credit['total_credits_used'].corr(user_segments_credit['composite_success_score'])
 }
 
-for metric, corr in correlations.items():
-    print(f"  {metric:25s}: r = {corr:.3f}")
+for _metric, _corr in correlations.items():
+    print(f"  {_metric:25s}: r = {_corr:.3f}")
 
 print(f"\n💾 Output: credit_analysis with credit usage segmentation")
 print(f"   Output: threshold_df with {len(threshold_df)} threshold analyses")
